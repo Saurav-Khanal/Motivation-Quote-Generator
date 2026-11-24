@@ -18,7 +18,12 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100px;
-        width: 600px;
+        height: 200px;
+        width: 900px;
         border-radius: 10px;
+        gap:5px;
+}
+
+.quote-line{
+    font-size: 34px;
 }
