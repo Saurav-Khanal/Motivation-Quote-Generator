@@ -16,6 +16,10 @@ newQuote.addEventListener("click", () => {
 });
 
 copyButton.addEventListener("click", () => {
+    console.log(quote.textContent);
+    if(quote.textContent==="Click New To Generate One"){
+        return;
+    }
   navigator.clipboard.writeText(quote.textContent);
   copyMessage.textContent="Quote Copied Successfully";
   copyMessage.style.display="block";
