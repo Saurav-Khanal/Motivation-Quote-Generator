@@ -17,4 +17,5 @@ newQuote.addEventListener("click", () => {
 
 copyButton.addEventListener("click", () => {
   navigator.clipboard.writeText(quote.textContent);
+  copyMessage.textContent="Quote Copied Successfully";
 });
