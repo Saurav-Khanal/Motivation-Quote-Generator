@@ -11,11 +11,15 @@ newQuote.addEventListener("click", () => {
     .then((data) => {
       console.log(data.quote);
       quote.textContent = `${data.quote}`;
-      author.textContent = data.author;
+      author.textContent = `- ${data.author}`;
     });
 });
 
 copyButton.addEventListener("click", () => {
   navigator.clipboard.writeText(quote.textContent);
   copyMessage.textContent="Quote Copied Successfully";
+  copyMessage.style.display="block";
+  setTimeout(()=>{
+  copyMessage.style.display="none";    
+  },2000)
 });
