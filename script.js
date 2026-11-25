@@ -1,6 +1,7 @@
 let newQuote=document.getElementById("new-quote");
 let copyButton=document.getElementById("copy-button");
 let quote=document.getElementById("quote-line");
+
 newQuote.addEventListener("click",()=>{
     fetch("https://dummyjson.com/quotes/random")
     .then((response)=>{return response.json()})
@@ -9,3 +10,9 @@ newQuote.addEventListener("click",()=>{
         quote.textContent=`${data.quote}`;
     })
 })
+
+copyButton.addEventListener("click",()=>{
+    navigator.clipboard.writeText(quote.textContent);
+    
+})
+
